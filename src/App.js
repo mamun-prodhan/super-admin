@@ -2,8 +2,9 @@ import React from "react";
 import menuHome from "../src/assets/home-menu.svg";
 import contractors from "../src/assets/engineer.png";
 import { SearchIcon } from "@heroicons/react/outline";
-import findTrade from '../src/assets/findatrade-01 4.png';
-import settings from '../src/assets/setting 2.png';
+import findTrade from "../src/assets/findatrade-01 4.png";
+import settings from "../src/assets/setting 2.png";
+import Contractors from "./components/Contractors/Contractors";
 
 function App() {
   return (
@@ -36,10 +37,13 @@ function App() {
         </div>
       </div>
       {/* graph div */}
-      <div className="w-[100%] lg:w-[80%] h-[200px] bg-red-200 mt-5">
+      <div className="w-[100%] lg:w-[80%] h-[600px] mt-5">
         {/* search bar */}
         <div className="">
-          <form action="" className="w-full m-0 md:mx-auto lg:m-0 md:max-w-[80%] lg:max-w-[60%]">
+          <form
+            action=""
+            className="w-full m-0 md:mx-auto lg:m-0 md:max-w-[80%] lg:max-w-[60%]"
+          >
             <div className="relative flex items-center">
               <SearchIcon className="w-5 h-6 text-[#081D03] absolute ml-3 pointer-events-none"></SearchIcon>
               <input
@@ -55,6 +59,12 @@ function App() {
             <img className="me-4" src={findTrade} alt="logo" />
             <img src={settings} alt="settings" />
           </button> */}
+        </div>
+        {/* graph container  */}
+        <div className="p-14 mt-10 bg-[#FFF] rounded-2xl">
+          <div className="w-[50%] bg-red-200">
+            <Contractors></Contractors>
+          </div>
         </div>
       </div>
     </div>
