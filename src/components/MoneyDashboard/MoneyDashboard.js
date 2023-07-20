@@ -7,13 +7,68 @@ import cross from "../../assets/delete.png";
 import error from "../../assets/error.png";
 import export1 from "../../assets/export.png";
 import goal from "../../assets/goal.png";
-import home from '../../assets/home.png';
+import home from "../../assets/home.png";
+
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 const MoneyDashboard = () => {
+  const data = [
+    {
+      name: "Feb 1",
+      uv: 140,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "Feb 2",
+      uv: 100,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: "Feb 3",
+      uv: 80,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: "Feb 4",
+      uv: 60,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: "Feb 5",
+      uv: 40,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: "Feb 6",
+      uv: 0,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: "Feb 7",
+      uv: 0,
+      pv: 4300,
+      amt: 2100,
+    },
+  ];
+
   return (
     <div className="lg:p-12">
-      <div className=" border-2 lg:flex gap-10 border-sky-500 rounded-xl p-5 lg:p-12">
-        <div className="w-[100%] md:w-[100%] lg:w-[30%]">
+      <div className=" border-2 lg:flex gap-10 border-sky-500 rounded-xl p-5 lg:p-12 lg:w-[70%]">
+        <div className="w-[100%] md:w-[100%] lg:w-[30%] mb-10 md:mb-10 lg:mb-0">
           <p className="text-xl font-semibold">Processing</p>
           <h3 className="text-3xl font-bold">$0.00 USD</h3>
           {/* money details */}
@@ -114,13 +169,43 @@ const MoneyDashboard = () => {
         </div>
         {/* graph */}
         <div className="w-[100%] md:w-[100%] lg:w-[70%]">
+            <div className="flex mb-5 items-center justify-between">
+                <div>
+                    <p className="font-semibold">Total earnings</p>
+                    <h3 className="text-3xl font-bold mt-3">$329.03 USD</h3>
+                </div>
+                <div className="flex bg-[#EAEAEA] rounded-xl p-1 mr-4">
+                  <p className="me-2 font-semibold">Past Year</p>
+                  <img src={arrow1} alt="export" />
+                </div>
+            </div>
           {/* graph div */}
-          <div className="h-[300px]"></div>
+          <div className="mb-5">
+          <ResponsiveContainer width="100%" height="70%">
+            <LineChart
+              data={data}
+              margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+            >
+              <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+              <CartesianGrid stroke="#ccc" />
+              <XAxis dataKey="name" />
+              <YAxis
+                dataKey="uv"
+                axisLine={false}
+                tickLine={false}
+                tickCount={8}
+              />
+              <Tooltip />
+            </LineChart>
+            </ResponsiveContainer>
+          </div>
           {/* transaction div */}
-          <div>
+          <div className="mt-14">
             <div className="md:flex lg:flex items-center justify-between">
               <div>
-                <h3 className="text-3xl text-center md:text-start lg:text-start  font-bold">Transactions</h3>
+                <h3 className="text-3xl text-center md:text-start lg:text-start  font-bold">
+                  Transactions
+                </h3>
               </div>
               <div className="md:flex lg:flex items-center">
                 <div className="flex items-center justify-center my-3 md:my-0 lg:my-0 mr-3 py-2 px-4 rounded-3xl bg-[#EAEAEA]">
@@ -146,35 +231,71 @@ const MoneyDashboard = () => {
                 </tr>
                 <tr className="border-b ">
                   <td className="flex items-center py-4">
-                    <img className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full" src={money} alt="" />
+                    <img
+                      className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full"
+                      src={money}
+                      alt=""
+                    />
                     <span>Payout from Demo to STRIPE TEST BANK 6789</span>
                   </td>
                   <td className="py-4">Apr 11</td>
-                  <td className="py-4"><span>$18.22</span> <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">Settled</span></td>
+                  <td className="py-4">
+                    <span>$18.22</span>{" "}
+                    <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">
+                      Settled
+                    </span>
+                  </td>
                 </tr>
                 <tr className="border-b ">
                   <td className="flex items-center py-4">
-                    <img className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full" src={money} alt="" />
+                    <img
+                      className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full"
+                      src={money}
+                      alt=""
+                    />
                     <span>Guitter Lesson</span>
                   </td>
                   <td className="py-4">Apr 11</td>
-                  <td className="py-4"><span>$38.22</span> <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">Settled</span></td>
+                  <td className="py-4">
+                    <span>$38.22</span>{" "}
+                    <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">
+                      Settled
+                    </span>
+                  </td>
                 </tr>
                 <tr className="border-b ">
                   <td className="flex items-center py-4">
-                    <img className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full" src={money} alt="" />
+                    <img
+                      className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full"
+                      src={money}
+                      alt=""
+                    />
                     <span>Payout from Demo to STRIPE TEST BANK 6789</span>
                   </td>
                   <td className="py-4">Apr 11</td>
-                  <td className="py-4"><span>$20.22</span> <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">Settled</span></td>
+                  <td className="py-4">
+                    <span>$20.22</span>{" "}
+                    <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">
+                      Settled
+                    </span>
+                  </td>
                 </tr>
                 <tr className="border-b ">
                   <td className="flex items-center py-4">
-                    <img className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full" src={money} alt="" />
+                    <img
+                      className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full"
+                      src={money}
+                      alt=""
+                    />
                     <span>Guitter Lesson</span>
                   </td>
                   <td className="py-4">Apr 11</td>
-                  <td className="py-4"><span>$10.22</span> <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">Settled</span></td>
+                  <td className="py-4">
+                    <span>$10.22</span>{" "}
+                    <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">
+                      Settled
+                    </span>
+                  </td>
                 </tr>
               </table>
             </div>
