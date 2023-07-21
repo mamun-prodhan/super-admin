@@ -5,12 +5,13 @@ import { SearchIcon } from "@heroicons/react/outline";
 import findTrade from "../src/assets/findatrade-01 4.png";
 import settings from "../src/assets/setting 2.png";
 import Contractors from "./components/Contractors/Contractors";
+import MoneyDashboard from "./components/MoneyDashboard/MoneyDashboard";
 
 function App() {
   return (
-    <div className="lg:flex py-16 bg-[#F3F7F2;]">
+    <div className="lg:flex py-16 bg-[#F3F7F2]">
       {/* menu div */}
-      <div className="w-[100%] lg:w-[20%] flex lg:block items-center justify-around py-3 bg-[#F3F7F2]">
+      <div className="w-[100%] lg:w-[20%] flex lg:block items-center justify-around py-3 ">
         <div className="flex flex-col items-center">
           <img
             className="w-[56px] h-[49px] hover:bg-[#3F8825] rounded-xl p-3  hover:bg-opacity-[31%]"
@@ -42,7 +43,7 @@ function App() {
         <div className="">
           <form
             action=""
-            className="w-full m-0 md:mx-auto lg:m-0 md:max-w-[80%] lg:max-w-[60%]"
+            className="w-full px-5 md:px-0 lg:px-0 m-0 md:mx-auto lg:m-0 md:max-w-[80%] lg:max-w-[60%]"
           >
             <div className="relative flex items-center">
               <SearchIcon className="w-5 h-6 text-[#081D03] absolute ml-3 pointer-events-none"></SearchIcon>
@@ -61,12 +62,17 @@ function App() {
           </button> */}
         </div>
         {/* graph container  */}
-        <div className="p-5 lg:p-14 mt-10 lg:flex gap-12 bg-[#FFF] rounded-2xl">
-          <div className="lg:w-[50%]">
-            <Contractors></Contractors>
+        <div className="p-5 lg:p-14 mt-10 bg-[#FFF] rounded-2xl">
+          <div className="lg:flex gap-12 bg-[#FFF]">
+            <div className="lg:w-[50%]">
+              <Contractors></Contractors>
+            </div>
+            <div className="lg:w-[50%]">
+              <Contractors></Contractors>
+            </div>
           </div>
-          <div className="lg:w-[50%]">
-            <Contractors></Contractors>
+          <div>
+            <MoneyDashboard></MoneyDashboard>
           </div>
         </div>
       </div>

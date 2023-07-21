@@ -69,21 +69,21 @@ const MoneyDashboard = () => {
     <div className="lg:p-12">
       <div className=" border-2 lg:flex gap-10 border-sky-500 rounded-xl p-5 lg:p-12 lg:w-[70%]">
         <div className="w-[100%] md:w-[100%] lg:w-[30%] mb-10 md:mb-10 lg:mb-0">
-          <p className="text-xl font-semibold">Processing</p>
-          <h3 className="text-3xl font-bold">$0.00 USD</h3>
+          <p className="text-xs font-bold">Processing</p>
+          <h3 className="text-xl font-bold">$0.00 USD</h3>
           {/* money details */}
           <div className="border border-[#EAEAEA] rounded-lg p-3 my-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <img
-                  className="p-2 bg-[#EAEAEA] rounded-full"
+                  className="p-1 bg-[#EAEAEA] rounded-full"
                   src={money}
                   alt=""
                 />
-                <p className="mx-3">See details about money thats on the way</p>
+                <p className="mx-2 text-xs">See details about money thats on the way</p>
               </div>
               <img
-                className="p-2 bg-[#EAEAEA] rounded-full"
+                className="p-1 bg-[#EAEAEA] rounded-full"
                 src={cross}
                 alt=""
               />
@@ -92,51 +92,51 @@ const MoneyDashboard = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <img
-                  className="p-2 bg-[#EAEAEA] rounded-full"
+                  className="p-1 bg-[#EAEAEA] rounded-full"
                   src={money}
                   alt=""
                 />
-                <p className="mx-3 font-semibold">Demo</p>
+                <p className="mx-2 text-xs font-bold">Demo</p>
               </div>
-              <p className="font-semibold">$0.00</p>
+              <p className="text-xs font-bold">$0.00</p>
             </div>
             <hr className="my-2" />
             <div className="flex items-center justify-between ">
               <div className="flex items-center">
-                <p className="mx-3 font-semibold">Pending</p>
+                <p className="mx-1 text-xs font-bold">Pending</p>
                 <img
-                  className=" bg-[#EAEAEA] rounded-full w-[16px] h-[16px]"
+                  className=" bg-[#EAEAEA] rounded-full w-[10px] h-[10px]"
                   src={error}
                   alt=""
                 />
               </div>
-              <p className="font-semibold">$0.00</p>
+              <p className="text-xs font-bold">$0.00</p>
             </div>
             <div className="flex items-center justify-between my-3">
-              <p className="mx-3 font-semibold">On the way</p>
-              <p className="font-semibold">$0.00</p>
+              <p className="text-xs mx-1 font-bold">On the way</p>
+              <p className="text-xs font-bold">$0.00</p>
             </div>
             <div className="flex items-center justify-between  text-[#787777]">
               <div className="flex items-center">
-                <p className="mx-3 font-semibold">Ready for payout</p>
+                <p className="mx-1 text-xs font-bold">Ready for payout</p>
                 <img
-                  className=" bg-[#EAEAEA] rounded-full w-[16px] h-[16px]"
+                  className=" bg-[#EAEAEA] rounded-full w-[10px] h-[10px]"
                   src={error}
                   alt=""
                 />
               </div>
-              <p className="font-semibold">$0.00</p>
+              <p className="text-xs font-bold">$0.00</p>
             </div>
             <div className="flex items-center justify-between my-3 text-[#787777]">
               <div className="flex items-center">
-                <p className="mx-3 font-semibold">Sent to payout account</p>
+                <p className="mx-1 text-xs font-bold">Sent to payout account</p>
                 <img
-                  className=" bg-[#EAEAEA] rounded-full w-[16px] h-[16px]"
+                  className=" bg-[#EAEAEA] rounded-full w-[10px] h-[10px]"
                   src={error}
                   alt=""
                 />
               </div>
-              <p className="font-semibold">$0.00</p>
+              <p className="text-xs font-bold">$0.00</p>
             </div>
             <hr className="mb-3" />
             <div className="flex items-center justify-between my-3">
