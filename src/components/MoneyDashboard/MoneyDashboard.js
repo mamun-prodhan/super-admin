@@ -139,29 +139,29 @@ const MoneyDashboard = () => {
               <p className="text-xs font-bold">$0.00</p>
             </div>
             <hr className="mb-3" />
-            <div className="flex items-center justify-between my-3">
-              <p className="mx-3 font-semibold text-[#928CF9]">See details</p>
+            <div className="flex items-center justify-between">
+              <p className="mx-1 text-xs font-bold text-[#928CF9]">See details</p>
               <img src={arrow3} alt="" />
             </div>
           </div>
-          <h3 className="text-3xl font-bold">Goal</h3>
+          <h3 className="text-xl font-bold">Goal</h3>
           <div className="border border-[#EAEAEA] rounded-lg p-3 my-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <img
-                  className="p-2 bg-[#EAEAEA] rounded-full"
+                  className="p-1 bg-[#EAEAEA] rounded-full"
                   src={goal}
                   alt=""
                 />
-                <p className="mx-3 font-semibold text-[#787777]">
+                <p className="mx-2 text-xs font-bold text-[#787777]">
                   Set an earnings goal
                 </p>
               </div>
-              <p className="mx-3 font-semibold text-[#928CF9]">Create goal</p>
+              <p className="text-xs font-bold text-[#928CF9]">Create goal</p>
             </div>
             <hr className="my-3" />
             <div>
-              <p className="mx-3 font-semibold text-[#787777]">
+              <p className="mx-1 text-xs font-bold text-[#787777]">
                 Earn my first $10
               </p>
             </div>
