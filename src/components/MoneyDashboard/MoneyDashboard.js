@@ -66,8 +66,8 @@ const MoneyDashboard = () => {
   ];
 
   return (
-    <div className="lg:p-12">
-      <div className=" border-2 lg:flex gap-10 border-sky-500 rounded-xl p-5 lg:p-12 lg:w-[70%]">
+    <div className="">
+      <div className=" border-2 mt-12 lg:flex gap-10 border-[#F3F7F2] rounded-xl p-5 lg:w-[50%]">
         <div className="w-[100%] md:w-[100%] lg:w-[30%] mb-10 md:mb-10 lg:mb-0">
           <p className="text-xs font-bold">Processing</p>
           <h3 className="text-xl font-bold">$0.00 USD</h3>
@@ -171,20 +171,20 @@ const MoneyDashboard = () => {
         <div className="w-[100%] md:w-[100%] lg:w-[70%]">
             <div className="flex mb-5 items-center justify-between">
                 <div>
-                    <p className="font-semibold">Total earnings</p>
-                    <h3 className="text-3xl font-bold mt-3">$329.03 USD</h3>
+                    <p className="text-xs font-bold">Total earnings</p>
+                    <h3 className="text-xl font-bold">$329.03 USD</h3>
                 </div>
-                <div className="flex bg-[#EAEAEA] rounded-xl p-1 mr-4">
-                  <p className="me-2 font-semibold">Past Year</p>
+                <div className="flex items-center bg-[#EAEAEA] rounded-xl p-1 mr-4">
+                  <p className="me-2 text-xs font-bold">Past Year</p>
                   <img src={arrow1} alt="export" />
                 </div>
             </div>
           {/* graph div */}
-          <div className="mb-5">
-          <ResponsiveContainer width="100%" height="70%">
+          <div className="h-[300px]">
+          <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={data}
-              margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+              margin={{ top: 5, right: 0, bottom: 5, left: 0 }}
             >
               <Line type="monotone" dataKey="uv" stroke="#8884d8" />
               <CartesianGrid stroke="#ccc" />
@@ -200,31 +200,31 @@ const MoneyDashboard = () => {
             </ResponsiveContainer>
           </div>
           {/* transaction div */}
-          <div className="mt-14">
+          <div className="mt-10">
             <div className="md:flex lg:flex items-center justify-between">
               <div>
-                <h3 className="text-3xl text-center md:text-start lg:text-start  font-bold">
+                <h3 className="text-xl text-center md:text-start lg:text-start  font-bold">
                   Transactions
                 </h3>
               </div>
               <div className="md:flex lg:flex items-center">
-                <div className="flex items-center justify-center my-3 md:my-0 lg:my-0 mr-3 py-2 px-4 rounded-3xl bg-[#EAEAEA]">
+                <div className="flex items-center justify-center my-3 md:my-0 lg:my-0 mr-3 p-2 rounded-3xl bg-[#EAEAEA]">
                   <img src={export1} alt="export" />
-                  <p className="ms-2 font-semibold">Export</p>
+                  <p className="ms-1 text-xs font-bold">Export</p>
                 </div>
-                <div className="flex items-center justify-center mb-3 md:mb-0 lg:mb-0 mr-3 py-2 px-4 rounded-3xl bg-[#EAEAEA]">
-                  <p className="me-2 font-semibold">All activity</p>
+                <div className="flex items-center justify-center mb-3 md:mb-0 lg:mb-0 mr-3 p-2 rounded-3xl bg-[#EAEAEA]">
+                  <p className="me-1 text-xs font-bold">All activity</p>
                   <img src={arrow1} alt="export" />
                 </div>
-                <div className="flex items-center justify-center mb-3 md:mb-0 lg:mb-0 py-2 px-4 rounded-3xl bg-[#EAEAEA]">
-                  <p className="me-2 font-semibold">All time</p>
+                <div className="flex items-center justify-center mb-3 md:mb-0 lg:mb-0 p-2 rounded-3xl bg-[#EAEAEA]">
+                  <p className="me-1 text-xs font-bold">All time</p>
                   <img src={arrow1} alt="export" />
                 </div>
               </div>
             </div>
             <div className="my-5">
-              <table className="w-[100%] font-semibold text-[#787777]">
-                <tr className="text-left text-xs md:text-sm lg:text-sm">
+              <table className="w-[100%] text-xs font-bold text-[#787777]">
+                <tr className="text-left">
                   <th>TYPE</th>
                   <th>DATE</th>
                   <th>AMOUNT</th>
@@ -232,16 +232,16 @@ const MoneyDashboard = () => {
                 <tr className="border-b ">
                   <td className="flex items-center py-4">
                     <img
-                      className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full"
+                      className="me-2 p-1 bg-[#EAEAEA] rounded-full"
                       src={money}
                       alt=""
                     />
-                    <span>Payout from Demo to STRIPE TEST BANK 6789</span>
+                    <span cla>Payout from Demo to STRIPE TEST BANK 6789</span>
                   </td>
                   <td className="py-4">Apr 11</td>
                   <td className="py-4">
-                    <span>$18.22</span>{" "}
-                    <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">
+                    <span>$18.22</span>
+                    <span className="ms-1 md:ms-2 lg:ms-2 rounded-md p-1 text-xs bg-[#D3F3CD]">
                       Settled
                     </span>
                   </td>
@@ -249,7 +249,7 @@ const MoneyDashboard = () => {
                 <tr className="border-b ">
                   <td className="flex items-center py-4">
                     <img
-                      className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full"
+                      className="me-2 p-1 bg-[#EAEAEA] rounded-full"
                       src={money}
                       alt=""
                     />
@@ -257,8 +257,8 @@ const MoneyDashboard = () => {
                   </td>
                   <td className="py-4">Apr 11</td>
                   <td className="py-4">
-                    <span>$38.22</span>{" "}
-                    <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">
+                    <span>$38.22</span>
+                    <span className="ms-1 md:ms-2 lg:ms-2 rounded-md p-1 text-xs bg-[#D3F3CD]">
                       Settled
                     </span>
                   </td>
@@ -266,7 +266,7 @@ const MoneyDashboard = () => {
                 <tr className="border-b ">
                   <td className="flex items-center py-4">
                     <img
-                      className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full"
+                      className="me-2 p-1 bg-[#EAEAEA] rounded-full"
                       src={money}
                       alt=""
                     />
@@ -274,8 +274,8 @@ const MoneyDashboard = () => {
                   </td>
                   <td className="py-4">Apr 11</td>
                   <td className="py-4">
-                    <span>$20.22</span>{" "}
-                    <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">
+                    <span>$20.22</span>
+                    <span className="ms-1 md:ms-2 lg:ms-2 rounded-md p-1 text-xs bg-[#D3F3CD]">
                       Settled
                     </span>
                   </td>
@@ -283,7 +283,7 @@ const MoneyDashboard = () => {
                 <tr className="border-b ">
                   <td className="flex items-center py-4">
                     <img
-                      className="me-2 md:me-5 lg:me-5 p-1 bg-[#EAEAEA] rounded-full"
+                      className="me-2 p-1 bg-[#EAEAEA] rounded-full"
                       src={money}
                       alt=""
                     />
@@ -291,8 +291,8 @@ const MoneyDashboard = () => {
                   </td>
                   <td className="py-4">Apr 11</td>
                   <td className="py-4">
-                    <span>$10.22</span>{" "}
-                    <span className="md:ms-5 lg:ms-5 rounded-md px-1 py-0.5 text-sm bg-[#D3F3CD]">
+                    <span>$10.22</span>
+                    <span className="ms-1 md:ms-2 lg:ms-2 rounded-md p-1 text-xs bg-[#D3F3CD]">
                       Settled
                     </span>
                   </td>
