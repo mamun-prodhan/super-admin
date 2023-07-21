@@ -61,8 +61,11 @@ function App() {
           </button> */}
         </div>
         {/* graph container  */}
-        <div className="p-14 mt-10 bg-[#FFF] rounded-2xl">
-          <div className="w-[50%] bg-red-200">
+        <div className="p-5 lg:p-14 mt-10 lg:flex gap-12 bg-[#FFF] rounded-2xl">
+          <div className="lg:w-[50%]">
+            <Contractors></Contractors>
+          </div>
+          <div className="lg:w-[50%]">
             <Contractors></Contractors>
           </div>
         </div>
